@@ -25,6 +25,9 @@ You are sitting on the beach.
 
 It is {advance_time()}
 
+{ time == 0:  It is the perfect time to go fishing.}
+* { time == 0 } [Go fishing] -> fishing
+
  
 
 + [Stroll down the beach] -> beach2
@@ -36,9 +39,9 @@ This is further down the beach.
 It is {advance_time()}
 
 { time == 0:  It is the perfect time to go fishing.}
+* { time == 0 } [Go fishing] -> fishing
 
 * { time == 1 } [Pick up some seashells] -> shells
-* { time == 0 } [Go fishing] -> fishing
 
 + [Move back up the beach] -> seashore
 
@@ -73,7 +76,19 @@ You pick up the shells
 
 == fishing ==
     
-You go fishing
--> beach2
+You go fishing. You caught 5 fish congrats!
+
++ [Move to the start of the beach] -> seashore
++ [Move to the second beach] -> beach2
++ [Swim down seaside] -> downtheocean
+
+== downtheocean ==
+
+You swam down the ocean, you see a circle of sharks and swam back to the orignal beach. This took a lot of time.
+
+~ time = time + 1
+
+-> seashore
+
     
     

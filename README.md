@@ -1,5 +1,5 @@
 # Exercise-01d-Inky-Misc
 
-# Your Name
+# Walker Setmayer
 
-# Your Github username
+# wsetmayer
